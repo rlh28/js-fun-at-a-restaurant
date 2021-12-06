@@ -72,6 +72,11 @@ describe("Chef (class)", function() {
       type: "breakfast"
     };
 
+    var foodItem3 = {
+      name: "Cinnamon Rolls",
+      price: "4.49",
+      type: "breakfast"
+    };
     addMenuItem(chef.restaurant, foodItem1);
     addMenuItem(chef.restaurant, foodItem2);
 
@@ -114,7 +119,7 @@ describe("Chef (class)", function() {
     assert.equal(foodConfirmation, "Sorry, we aren't serving Quiche today.");
   });
 
-  it.skip("should confirm if a different requested item is not on the menu", function () {
+  it("should confirm if a different requested item is not on the menu", function () {
     var restaurant = createRestaurant("Best Bakery Ever");
     var chef = new Chef("Scott", restaurant);
 
